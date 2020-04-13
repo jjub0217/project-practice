@@ -4,51 +4,78 @@
     padding: 0;
     display: none;
 }
+
 body {
     margin: 0;
 }
+
 /*스타일 초기화 끝*/
 
 header {
-    background-color: pink;
+    /* background-color: pink; */
     height: 75PX;
+    width: 100%;
     margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #e0e0e0;
+    position: fixed;
+    z-index: 10;
+    /*이슈2*/
+    background-color: rgba(255, 255, 255, 0.4);
+    /* transform: translateX(-100%); */
 }
+
 header a {
     padding: 20px 0;
     display: block;
 }
+
 header img {
-    background-color: salmon;
     margin: 0px 25px;
     display: block;
+    transform: translateX(20%); /*이슈3*/
 }
 
 header button {
     border: 0;
     background-color: transparent;
-    /* text-indent: -99999px; */
+    box-shadow: none;
+    margin-right: 2px;
 }
+
 header .sprite {
     background-image: url(./img/Icons.svg);
     background-repeat: no-repeat;
-    /* width: 50px; */
-    height: 50px;
-    /* text-indent: -9999px; */
+    background-size: cover;
+    box-shadow: none;
+    width: 70px;
+    height: 70px;
+    /* background-color:tomato; */
+    text-indent: -9999px;
+    border: 0;
 }
-.sprite .sprite-open {
+
+header .sprite-open {
     /* background-position: left -200px; */
+    background-position-x: 0px;
+    background-position-y: 5px;
 }
-.sprite-close {
+
+header .sprite-close {
     /* background-position: left -200px; */
-    /* position: absolute;
-    top: 0;
-    right: 0; *
     /* z-index: 10; */
+    position: absolute;
+    top: 15px;
+    right: 13px;
+    font-weight: 700;
+    background-position-x: -80px;
+    /* background-color:blue; */
+}
+
+.menu-open:hover {
+    background-color: #f5f5f5;
 }
 
 nav li {
@@ -56,12 +83,44 @@ nav li {
 }
 
 nav {
-    background-color: plum;
-    position: relative;
-    display: none;
+    background-color: hsla(225, 57%, 10%, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transform: translateX(100%);
+    /*왜 되지?*/
+    transition: 0.4s;
 }
 
+.menu-item-act nav {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+nav ul {
+    margin-top: 60px;
+    padding: 0;
+}
+
+nav ul li {
+    line-height: 1.15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid hsla(225, 57%, 30%, 0.5);
+    padding-left: 17px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
 main {
+    padding-top: 100px;
     display: flex;
     justify-content: center;
 }
@@ -127,17 +186,14 @@ main ul li img {
     margin-top: 15px;
 }
 
-figure {
-    margin: 0;
-    padding-bottom: 10px;
-    height: 350px;
-}
-
 main ul li a:hover img {
     transform: scale(1.05);
 }
 
-main figure {
+figure {
+    margin: 0;
+    padding-bottom: 10px;
+    height: 350px;
     background-color: #f5f5f5;
 }
 
@@ -156,9 +212,9 @@ section {
     left: 0;
     font-size: 14px;
     visibility: hidden;
-    transition: 1s;
+    transition: all 1s ease;
     opacity: 0;
-    background-color: rgba(216, 215, 215, 0.2);
+    background-color: rgba(255, 254, 254, 0.6);
 }
 
 .menu-item-act section {
@@ -166,16 +222,20 @@ section {
     opacity: 1;
 }
 
-
 section button {
     position: absolute;
     top: 0;
     right: 0;
     border: 0;
-    background-color: tomato;
     width: 45px;
     height: 45px;
     font-size: 14px;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+section button:hover {
+    background-color: #f3f0f0;
 }
 
 section .dl-first {
@@ -207,7 +267,6 @@ section .dl-first span {
 
 section .dl-second {
     padding: 20px 20px;
-    background-color: yellow;
     display: inline-flex;
     flex-wrap: wrap;
     position: absolute;
