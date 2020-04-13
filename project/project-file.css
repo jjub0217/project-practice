@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 숨김 컨텐츠 */
+.a11yHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/* 기본 스타일 */
+
+body {
+    font-family: 'Spoqa Han Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.buttonBurgerBar {
+    cursor: pointer;
+    position: relative;
+    background-color: yellow;
+}
+
+.burgerBar {
+    position: absolute;
+    background-color: black;
+}
+
+.appNavigation button {
+    background-color: yellow;
+}
+
+.menuList li {
+    width: 400px;
+    height: 360px;
+    background-color: pink;
+}
+
+figure {
+    text-align: center;
+    color: #848484;
+    margin: 50px 100px 0px;
+    padding-top: 30px;
+}
+
+figure figcaption {
+    font-size: 16px;
+}
+
+figure img {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+figure img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.menuList dl {
+    background-color: yellow;
+    color: #424242;
+    width: 400px;
+    height: 360px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+    line-height: 18px;
+    font-size: 16px;
+    position: relative;
+}
+
+.menuList dl dt {
+    font-size: 18px;
+    line-height: 1.1;
+    width: 360px;
+}
+
+.menuList dl span {
+    font-size: 14px;
+    display: block;
+    color: #848484;
+}
+
+hr {
+    width: 360px;
+    margin: 15px 0;
+    border-top: none;
+    border-bottom: 1px solid black;
+}
+.menuList dd p {
+    font-size: 14px;
+}
+.explainTop {
+    position: absolute;
+    width: 100%;
+}
+.menuList .dl__dd2 {
+    background-color: skyblue;
+    height: 70px;
+}
+/* .menuList .dl__dd2 {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    background-color: skyblue;
+    overflow: hidden;
+    display: block;
+} */
+
+
+/* .appMain .blossom,
+.appMain .brownie,
+.appMain .jeju,
+.appMain .pomegranate {
+    display: flex;
+} */
+
+
+/* .appMain div {
+    text-align: center;
+} */
+
+/* section {
+    background-color: #F2F2F2;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    justify-content: center;
+} */
+
+/* section img {
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+
+}
+
+section img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+section h2 {
+    text-align: center;
+}
+
+.explain {
+    background-color: pink;
+    width: 400px;
+    height: 360px;
+    display: block;
+}
+
+.explain dl {
+    margin-left: 20px;
+    width: 350px;
+}
+
+.explain dt {
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.explain span {
+    font-size: 15px;
+    display: block;
+    color: #848484;
+}
+
+.explain dt::after {
+    content: "";
+    border: 1px solid black;
+    display: flex;
+    width: 350px;
+    margin-top: 15px;
+
+}
+
+.explain dd {
+    margin-top: 15px;
+    display: block;
+    text-align: left;
+    line-height: 1.2;
+
+}
+
+table {
+    background-color: yellow;
+    width: 300px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    display: flex;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.table .left:nth-child(2) {
+    margin-left: 100px;
+} */
+
+/* .buttonNone {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+} */
+
+/* 공통 메뉴 */
+
+
+/* 메뉴 */
+
+.appNavigation button {
+    float: right;
+}
+
+.appNavigation span {}
