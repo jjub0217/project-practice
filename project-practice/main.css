@@ -24,18 +24,30 @@ header {
     z-index: 10;
     /*이슈2*/
     background-color: rgba(255, 255, 255, 0.4);
-    /* transform: translateX(-100%); */
-}
+    /* animation-direction: alternate; */
+    transform: translateY(-105%);
+    animation: headerLogo 0.7s linear forwards;
 
+}
 header a {
     padding: 20px 0;
     display: block;
+    animation: headerLogo 0.7s 0.7s linear forwards;
+    transform: translateX(-105%);
 }
 
 header img {
     margin: 0px 25px;
     display: block;
-    transform: translateX(20%); /*이슈3*/
+    /* transform: translateX(20%);*/
+    /*이슈3 */
+}
+
+@keyframes headerLogo {
+
+    to {
+        transform: none;
+    }
 }
 
 header button {
@@ -43,6 +55,8 @@ header button {
     background-color: transparent;
     box-shadow: none;
     margin-right: 2px;
+    animation: headerLogo 0.7s 0.7s linear forwards;
+    transform: translateX(105%);
 }
 
 header .sprite {
