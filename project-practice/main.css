@@ -11,43 +11,45 @@ body {
 
 /*스타일 초기화 끝*/
 
+/*애니메이션 설정*/
+@keyframes headerLogo {
+
+    100% {
+        transform: none;
+        opacity: 1;    /*이슈5.md*/
+    }
+}
+/*애니메이션 설정 끝*/
+
 header {
     /* background-color: pink; */
     height: 75PX;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #e0e0e0;
     position: fixed;
     z-index: 10;
-    /*이슈2*/
+    /* -> 이슈2.md*/
     background-color: rgba(255, 255, 255, 0.4);
-    /* animation-direction: alternate; */
     transform: translateY(-105%);
-    animation: headerLogo 0.7s linear forwards;
+    animation: headerLogo 0.2s 0.4s linear forwards;  
 
 }
 header a {
     padding: 20px 0;
     display: block;
-    animation: headerLogo 0.7s 0.7s linear forwards;
+    animation: headerLogo 0.3s 0.5s linear forwards;   /* -> 이슈4.md*/
     transform: translateX(-105%);
 }
 
 header img {
     margin: 0px 25px;
     display: block;
-    /* transform: translateX(20%);*/
-    /*이슈3 */
-}
+    /* transform: translateX(20%); -> 이슈3.md/*/
 
-@keyframes headerLogo {
-
-    to {
-        transform: none;
-    }
 }
 
 header button {
@@ -55,7 +57,7 @@ header button {
     background-color: transparent;
     box-shadow: none;
     margin-right: 2px;
-    animation: headerLogo 0.7s 0.7s linear forwards;
+    animation: headerLogo 0.3s 0.5s linear forwards;
     transform: translateX(105%);
 }
 
@@ -137,6 +139,8 @@ main {
     padding-top: 100px;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
+    
 }
 
 /*모바일 버전*/
@@ -151,9 +155,11 @@ main {
 main ul {
     padding: 0;
     width: 840px;
-    margin-top: 0;
+    margin-top: 0px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 0;
+ 
 }
 
 /*모바일 버전*/
@@ -175,6 +181,25 @@ main li {
     margin-left: 10px;
     position: relative;
     margin-bottom: 20px;
+    opacity: 0;    /*이슈5.md*/
+    animation: headerLogo 0.5s linear forwards; /*이슈5.md*/ 
+    transform: translateY(15%);    /*이슈5.md*/
+   
+}
+main ul li:nth-of-type(1) {
+    animation-delay: .5s;
+}
+
+main ul li:nth-of-type(2) {
+    animation-delay: .7s;
+}
+
+main ul li:nth-of-type(3) {
+    animation-delay: .9s;
+}
+
+main ul li:nth-of-type(4) {
+    animation-delay: 1.1s;
 }
 
 /*모바일 버전*/
@@ -190,9 +215,16 @@ main ul li a {
     text-align: center;
     text-decoration: none;
     color: #6f6f6f;
+    
     /* width: 50%;   */
-    /*(이슈1) 왜 자식요소한테 직접적으로 위드값을 주면 안되는걸까요?*/
+    /* ->(이슈1) 왜 자식요소한테 직접적으로 위드값을 주면 안되는걸까요?*/
 }
+
+/* main ul li:nth-of-type(n+5) {
+    transform: translateY(105%);
+    animation: headerLogo 0.4s 0.5s linear forwards;
+
+} */
 
 main ul li img {
     transform: scale(0.95);
